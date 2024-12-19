@@ -16,7 +16,7 @@ const Home = () => {
         <main>
             <section className="hero">
                 <figure className="hero__Img">
-                    <img src={laptop1280} alt="Hero image" />
+                    <img src={laptop1280} />
                 </figure>
 
                 <div className="hero__writeUp">
@@ -24,9 +24,6 @@ const Home = () => {
                 </div>
 
                 <div className='hero__btn btn' onClick={() => scrollToAboutSection(aboutRef)}>
-                        {/* <div >
-                            
-                        </div> */}
                         <div className='btn__about'>
                             <MdKeyboardDoubleArrowDown className='btn__dblArr'/>
                             ABOUT ME
@@ -36,7 +33,7 @@ const Home = () => {
 
             <section className="about" ref={aboutRef}>
                 <figure className='about__figure'>
-                    <img src={myPhoto} alt="personal image" />
+                    <img src={myPhoto} />
                 </figure>
 
                 <div className="about__writeUp">

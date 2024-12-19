@@ -1,22 +1,13 @@
 import { Link } from "react-router-dom"
-/* import { FiSun, FiMoon } from 'react-icons/fi' */
-/* import { FaToggleOff, FaToggleOn } from 'react-icons/fa' */
-import { IoShapes, IoShapesOutline } from "react-icons/io5"
+import { IoShapes } from "react-icons/io5"
 
-const Header = ({ /* isDarkMode */ /* handleClick */ toggleMenu, isActive }) => {
+const Header = ({ toggleMenu, isActive }) => {
     return (
         <header className="header">
             <section className="header__logo-line">
                 <div className="header__icon">
                     <IoShapes className="IoShapes"/>
                 </div>
-
-                {/* <div className="nav__toggleBtn" onClick={handleClick}>
-                    {
-                        isDarkMode ? <FaToggleOff className="FaToggleOff"/> 
-                            : <FaToggleOn className="FaToggleOn"/>
-                    }
-                </div> */}
 
                 <button className="header__menuBtn" onClick={toggleMenu}>
                         <div className={`menuIcon ${isActive ? 'active' : ''}`}>

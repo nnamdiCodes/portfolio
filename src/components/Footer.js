@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { IoShapes, /* IoShapesOutline */ } from "react-icons/io5"
+import { IoShapes } from "react-icons/io5"
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa" 
 
 const Footer = () => {
@@ -7,12 +7,6 @@ const Footer = () => {
         <footer>
 
             <div className="listItems">
-                {/* <div className="IoShapesDiv">
-                    
-                    { isDarkMode ? <IoShapes className="IoShapes"/> 
-                        : <IoShapesOutline className="IoShapesOutline" />}
-                </div> */}
-
                 <ul className="navUl">
                     <li><IoShapes className="IoShapes"/></li>
                     <li className="listItem"><Link to={"/"} >HOME</Link></li>
