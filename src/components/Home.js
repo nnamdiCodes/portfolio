@@ -16,7 +16,7 @@ const Home = () => {
         <main>
             <section className="hero">
                 <figure className="hero__Img">
-                    <img src={laptop1280} alt="Hero image" />
+                    <img src={laptop1280} alt="Hero file" />
                 </figure>
 
                 <div className="hero__writeUp">
@@ -33,7 +33,7 @@ const Home = () => {
 
             <section className="about" ref={aboutRef}>
                 <figure className='about__figure'>
-                    <img src={myPhoto} alt="personal image" />
+                    <img src={myPhoto} alt="personal file" />
                 </figure>
 
                 <div className="about__writeUp">
