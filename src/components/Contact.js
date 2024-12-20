@@ -3,13 +3,14 @@ const Contact = ({
 }) => {
     return (
         <form name="contact" data-netlify="true" className="form" onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="contact" />
             
             <h1>Contact</h1>
 
             <p>
                 I would love to hear about your project and how i could help. Please fill in the form, and i'll get back to you as soon as possible.
             </p>
+            
+            <input type="hidden" name="form-name" value="contact" />
 
             <div className="contactForm">
 
