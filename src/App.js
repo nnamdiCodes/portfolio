@@ -59,7 +59,7 @@ function App() {
   }
 
   const handleSubmit = (event) => {
-    /* event.preventDefault() */
+    event.preventDefault()
 
     if (validateForm()) {
 
