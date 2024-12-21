@@ -12,14 +12,14 @@ function App() {
 
   const [formData, setFormData] = useState({
     name: '',
-    emailAddress: '',
+    email: '',
     message: ''
   })
 
   const [errors, setErrors] = useState({})
 
   const nameRef = useRef(null)
-  const emailAddressRef = useRef(null)
+  const emailRef = useRef(null)
   const messageRef = useRef(null)
 
   useEffect(() => {
@@ -38,9 +38,9 @@ function App() {
         isValid = false
     }
 
-    if (!formData.emailAddress) {
+    if (!formData.email) {
       newErrors.email = 'This field is required'
-      if (isValid) emailAddressRef.current.focus()
+      if (isValid) emailRef.current.focus()
         isValid = false
     }
 
@@ -79,7 +79,7 @@ function App() {
       showToast("Form submitted successfully!")
       setFormData({
         name: '',
-        emailAddress: '',
+        email: '',
         message: ''
       })
     }
@@ -116,12 +116,12 @@ function App() {
           <Contact 
             handleChange={handleChange}
             name={formData.name}
-            emailAddress={formData.emailAddress}
+            email={formData.email}
             message={formData.message}
             handleSubmit={handleSubmit}
             errors={errors}
             nameRef={nameRef}
-            emailAddressRef={emailAddressRef}
+            emailRef={emailRef}
             messageRef={messageRef}
           />
           } />

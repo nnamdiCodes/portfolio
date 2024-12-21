@@ -1,5 +1,5 @@
 const Contact = ({
-        handleChange, name, emailAddress, message, handleSubmit, errors, nameRef, emailAddressRef, messageRef
+        handleChange, name, email, message, handleSubmit, errors, nameRef, emailRef, messageRef
 }) => {
     return (
         <main className="contact">
@@ -28,13 +28,13 @@ const Contact = ({
                 </div>
         
                 <div>
-                    <label htmlFor="emailAddress">Email Address *</label>
+                    <label htmlFor="email">Email Address *</label>
                     <input type="email" 
-                        id='emailAddress' 
-                        name='emailAddress' 
-                        value={emailAddress} 
+                        id='email' 
+                        name='email' 
+                        value={email} 
                         onChange={handleChange}
-                        ref={emailAddressRef}
+                        ref={emailRef}
                         className= {errors.email ? 'input-error' : 'input-normal'}
                     />
                     {errors.email && <p className='errMsg'>{errors.email}</p>}
