@@ -615,7 +615,7 @@ textarea {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.contactForm div:nth-child(3) {
+.contactForm div:nth-child(4) {
   grid-column: span 2;
 }
 

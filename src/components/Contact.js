@@ -12,7 +12,7 @@ const Contact = ({
 
             <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="contactForm"
             >
-                {/* <input type="hidden" name="form-name" value="contact" className="hidden"/> */}
+                <input type="hidden" name="form-name" value="contact" className="hidden"/>
 
                 <div>
                     <label htmlFor="name">Name *</label>
