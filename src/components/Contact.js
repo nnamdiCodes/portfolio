@@ -10,9 +10,9 @@ const Contact = ({
                 I would love to hear about your project and how i could help. Please fill in the form, and i'll get back to you as soon as possible.
             </p>
 
-            <form name="contact" data-netlify="true" onSubmit={handleSubmit} className="contactForm"
+            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="contactForm"
             >
-                <input type="hidden" name="form-name" value="contact" className="hidden"/>
+                {/* <input type="hidden" name="form-name" value="contact" className="hidden"/> */}
 
                 <div>
                     <label htmlFor="name">Name *</label>
