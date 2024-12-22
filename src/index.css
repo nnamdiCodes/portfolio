@@ -453,6 +453,16 @@ textarea {
   height: 100px;
 }
 
+.input-normal:hover,
+.input-normal:focus {
+  outline: 1px solid #333;
+}
+
+.input-error:focus {
+  outline: 1px solid red;
+}
+
+
 .errMsg {
   color: red;
   margin-top: 5px;

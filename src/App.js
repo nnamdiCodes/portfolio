@@ -54,16 +54,16 @@ function App() {
     return isValid
   }
 
-  const showToast = (messageToast) => {
+  /* const showToast = (messageToast) => {
     alert(messageToast)
-  }
+  } */
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
     if (validateForm()) {
 
-      /* const encodedData = new URLSearchParams();
+      const encodedData = new URLSearchParams();
       for (const key in formData) {
         encodedData.append(key, formData[key]);
       }
@@ -74,9 +74,9 @@ function App() {
         body: encodedData.toString(),
       })
         .then(() => alert("Form successfully submitted!"))
-        .catch((error) => alert("Error submitting form", error)) */
+        .catch((error) => alert("Error submitting form", error))
 
-      showToast("Form submitted successfully!")
+      /* showToast("Form submitted successfully!") */
       setFormData({
         name: '',
         email: '',
