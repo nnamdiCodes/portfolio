@@ -58,32 +58,30 @@ function App() {
     alert(messageToast)
   } */
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    if (validateForm()) {
-
-      const encodedData = new URLSearchParams();
-      for (const key in formData) {
-        encodedData.append(key, formData[key]);
+    const handleSubmit = (event) => {
+      event.preventDefault();
+    
+      if (validateForm()) {
+        const encodedData = new URLSearchParams({
+          "form-name": "contact",
+          ...formData
+        });
+    
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encodedData.toString(),
+        })
+          .then(() => alert("Form successfully submitted!"))
+          .catch((error) => alert("Error submitting form", error));
+  
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
       }
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encodedData.toString(),
-      })
-        .then(() => alert("Form successfully submitted!"))
-        .catch((error) => alert("Error submitting form", error))
-
-      /* showToast("Form submitted successfully!") */
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      })
-    }
-  }
+    };
 
   const handleChange = (event) => {
     const {name, type, checked, value} = event.target
