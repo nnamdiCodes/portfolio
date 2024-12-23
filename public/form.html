@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    .input-error {
+      border: 1px solid red;
+    }
+
+    .input-normal {
+      border: 1px solid #ccc;
+    }
+
+    .errMsg {
+      color: red;
+      font-size: 0.9em;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function validateForm(event) {
+      const form = event.target;
+      let isValid = true;
+      const errors = {};
+
+      const nameInput = form.querySelector('#name');
+      const emailInput = form.querySelector('#email');
+      const messageInput = form.querySelector('#message');
+
+      if (!nameInput.value.trim()) {
+        isValid = false;
+        errors.name = 'Name is required';
+        nameInput.classList.add('input-error');
+      } else {
+        nameInput.classList.remove('input-error');
+      }
+
+      if (!emailInput.value.trim() || !/\S+@\S+\.\S+/.test(emailInput.value)) {
+        isValid = false;
+        errors.email = 'Valid email is required';
+        emailInput.classList.add('input-error');
+      } else {
+        emailInput.classList.remove('input-error');
+      }
+
+      if (!messageInput.value.trim()) {
+        isValid = false;
+        errors.message = 'Message is required';
+        messageInput.classList.add('input-error');
+      } else {
+        messageInput.classList.remove('input-error');
+      }
+
+      if (!isValid) {
+        event.preventDefault();
+        document.querySelector('.errMsg-name').innerText = errors.name || '';
+        document.querySelector('.errMsg-email').innerText = errors.email || '';
+        document.querySelector('.errMsg-message').innerText = errors.message || '';
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="contact" method="POST" data-netlify="true" class="contactForm" onsubmit="validateForm(event)" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" class="hidden" />
+
+    <div>
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" class="input-normal" />
+      <p class="errMsg errMsg-name"></p>
+    </div>
+
+    <div>
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" class="input-normal" />
+      <p class="errMsg errMsg-email"></p>
+    </div>
+
+    <div>
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" class="input-normal"></textarea>
+      <p class="errMsg errMsg-message"></p>
+    </div>
+
+    <button type="submit">SEND MESSAGE</button>
+  </form>
+</body>
+</html>
