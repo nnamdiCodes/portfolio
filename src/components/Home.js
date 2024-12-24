@@ -38,7 +38,7 @@ const Home = () => {
 
                 <div className="about__writeUp">
                     <h2>About Me</h2>
-                    <p>I'm a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean Javascript. When writing Javascript code, I mostly use React, but I can adapt to whatever tools are required. I'm based in Abuja, Nigeria but I'm happy working remotely and have experience in remote teams. When i'm not coding, you'll find me outdoors. I love being out in nature weather that's going for a work or cycling. I'd love you to check out my work.</p>
+                    <p>I'm a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean Javascript. When writing Javascript code, I mostly use React, but I can adapt to whatever tools are required. I'm based in Abuja, Nigeria but I'm happy working remotely and have experience in remote teams. When i'm not coding, you'll find me outdoors. I love being out in nature weather that's going for a walk or cycling. I'd love you to check out my work.</p>
                     <button>
                         <Link to={'project'}>
                             GO TO PORTFOLIO
